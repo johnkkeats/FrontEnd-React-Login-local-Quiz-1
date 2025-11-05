@@ -12,8 +12,6 @@ function About() {
       className="relative py-35 px-6 text-center bg-[#121212] text-white overflow-hidden"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-16">
-        
-        {/* LEFT CONTENT */}
         <div className="flex-1">
           <p
             id="about-label"
@@ -27,9 +25,10 @@ function About() {
           </h2>
 
           <p className="text-gray-300 leading-relaxed mb-8">
-            Every flavor tells a story. From classic recipes to modern twists, each dish is prepared with love and
-            crafted to perfection. Our kitchen blends tradition with creativity, offering meals that create lasting
-            memories for every guest.
+            Every flavor tells a story. From classic recipes to modern twists,
+            each dish is prepared with love and crafted to perfection. Our
+            kitchen blends tradition with creativity, offering meals that create
+            lasting memories for every guest.
           </p>
 
           <div className="text-[#E4C590] mb-2 uppercase tracking-wide font-semibold">
@@ -52,10 +51,8 @@ function About() {
           </a>
         </div>
 
-        {/* RIGHT IMAGE AREA */}
         <div className="flex-1 relative flex justify-center items-center">
           <div className="relative w-[320px] sm:w-[400px] md:w-[480px]">
-            {/* Main Image */}
             <img
               src={aboutBanner}
               alt="about banner"
@@ -63,7 +60,6 @@ function About() {
               loading="lazy"
             />
 
-            {/* Floating Small Image */}
             <img
               src={aboutAbsImage}
               alt="Decorative plate"
@@ -71,7 +67,6 @@ function About() {
               loading="lazy"
             />
 
-            {/* Badge */}
             <img
               src={badge2}
               alt="Award badge"
@@ -80,7 +75,6 @@ function About() {
             />
           </div>
 
-          {/* Decorative Shape */}
           <img
             src={shape3}
             alt="decorative shape"

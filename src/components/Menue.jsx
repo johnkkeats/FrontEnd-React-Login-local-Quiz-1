@@ -47,11 +47,9 @@ function Menue() {
 
   return (
     <section className="relative bg-[#121212] text-white py-30 px-6 font-[DM_Sans] overflow-hidden">
-      {/* Background pattern overlay (subtle) */}
       <div className="absolute inset-0 bg-[url('./src/assets/images/images/pattern-dark.png')] bg-cover opacity-5"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Heading */}
         <div className="text-center mb-16">
           <p className="text-[#E4C590] tracking-widest text-sm font-semibold uppercase">
             Special Selection
@@ -64,9 +62,7 @@ function Menue() {
           <h2 className="text-5xl font-[Forum] text-white">Delicious Menu</h2>
         </div>
 
-        {/* Menu layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12">
-          {/* Left Side */}
           <div className="space-y-10">
             {menuLeft.map((item, i) => (
               <div key={i} className="flex items-start gap-5 group">
@@ -97,7 +93,6 @@ function Menue() {
             ))}
           </div>
 
-          {/* Right Side */}
           <div className="space-y-10">
             {menuRight.map((item, i) => (
               <div key={i} className="flex items-start gap-5 group">
@@ -129,7 +124,6 @@ function Menue() {
           </div>
         </div>
 
-        {/* Footer */}
         <div className="text-center mt-16">
           <p className="text-gray-300">
             During winter daily from{" "}

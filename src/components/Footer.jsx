@@ -8,14 +8,11 @@ function Footer() {
       className="relative text-white bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: `url(${footerBg})` }}
     >
-      {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/20 to-black/20 backdrop-blur-[2px]"></div>
 
-      {/* Gold glow divider on top */}
       <div className="absolute top-0 left-0 w-full h-10 bg-gradient-to-r from-[#E4C590]/0 via-[#E4C590]/40 to-[#E4C590]/0 blur-sm rounded-b-full"></div>
 
       <div className="relative max-w-4xl mx-auto px-6 py-20 text-center">
-        {/* === Logo === */}
         <a href="#" className="inline-block mb-6">
           <img
             src={logo}
@@ -26,7 +23,6 @@ function Footer() {
           />
         </a>
 
-        {/* === Contact Info === */}
         <div className="space-y-2 mb-6">
           <p className="text-gray-400">
             Restaurant St, Delicious City, Gujrat, PK
@@ -46,7 +42,6 @@ function Footer() {
           <p className="text-gray-400">Open : 09:00 am - 01:00 pm</p>
         </div>
 
-        {/* === Gold Divider === */}
         <div className="flex justify-center gap-2 mb-6">
           {[...Array(3)].map((_, i) => (
             <div
@@ -56,7 +51,6 @@ function Footer() {
           ))}
         </div>
 
-        {/* === Newsletter === */}
         <h3 className="text-[#E4C590] text-2xl font-[Forum] mb-2">
           Get News & Offers
         </h3>
@@ -79,22 +73,18 @@ function Footer() {
           </button>
         </form>
 
-        {/* === Links Section === */}
         <div className="flex flex-wrap justify-center gap-8 text-lg font-light tracking-wide mb-8">
-          {["Home", "Menus", "About Us", "Our Chefs", "Contact"].map(
-            (item) => (
-              <a
-                key={item}
-                href="#"
-                className="hover:text-[#E4C590] transition duration-300 hover:-translate-y-1"
-              >
-                {item}
-              </a>
-            )
-          )}
+          {["Home", "Menus", "About Us", "Our Chefs", "Contact"].map((item) => (
+            <a
+              key={item}
+              href="#"
+              className="hover:text-[#E4C590] transition duration-300 hover:-translate-y-1"
+            >
+              {item}
+            </a>
+          ))}
         </div>
 
-        {/* === Social Links === */}
         <div className="flex flex-wrap justify-center gap-8 text-lg font-light tracking-wide mb-12">
           {["Facebook", "Instagram", "Twitter", "YouTube", "Google Map"].map(
             (item) => (
@@ -127,7 +117,6 @@ function Footer() {
         </div>
       </div>
 
-      {/* Subtle floating sparkles */}
       <div className="absolute -top-10 right-10 w-2 h-2 bg-[#E4C590] rounded-full animate-ping"></div>
       <div className="absolute top-6 left-12 w-1.5 h-1.5 bg-[#E4C590]/70 rounded-full animate-pulse"></div>
     </footer>

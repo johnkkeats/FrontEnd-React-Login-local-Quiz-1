@@ -8,7 +8,6 @@ function Reservations() {
       className="relative py-24 px-6 bg-[#121212] text-white overflow-hidden"
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 bg-[#181818] rounded-2xl shadow-xl overflow-hidden">
-        {/* LEFT FORM */}
         <div className="p-10 bg-[#121212]">
           <h2 className="text-4xl font-[Forum] mb-4 text-center text-[#E4C590]">
             Online Reservation
@@ -26,7 +25,6 @@ function Reservations() {
           </p>
 
           <form className="space-y-6">
-            {/* Name + Phone */}
             <div className="grid sm:grid-cols-2 gap-4">
               <input
                 type="text"
@@ -42,7 +40,6 @@ function Reservations() {
               />
             </div>
 
-            {/* Person + Date + Time */}
             <div className="grid sm:grid-cols-3 gap-4">
               <select
                 name="person"
@@ -85,7 +82,6 @@ function Reservations() {
               </select>
             </div>
 
-            {/* Message */}
             <textarea
               name="message"
               rows="4"
@@ -93,7 +89,6 @@ function Reservations() {
               className="w-full bg-[#1e1e1e] border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#E4C590]"
             ></textarea>
 
-            {/* Button */}
             <div className="text-center pt-4">
               <button
                 type="submit"
@@ -106,7 +101,6 @@ function Reservations() {
           </form>
         </div>
 
-        {/* RIGHT SIDE INFO */}
         <div
           className="relative flex flex-col justify-center items-center text-center px-10 py-16 bg-cover bg-center"
           style={{ backgroundImage: `url(${formPattern})` }}
@@ -114,9 +108,7 @@ function Reservations() {
           <div className="absolute inset-0 bg-black/70"></div>
 
           <div className="relative z-10 space-y-6">
-            <h2 className="text-4xl font-[Forum] text-[#E4C590]">
-              Contact Us
-            </h2>
+            <h2 className="text-4xl font-[Forum] text-[#E4C590]">Contact Us</h2>
 
             <div>
               <p className="text-[#E4C590] uppercase tracking-wide">

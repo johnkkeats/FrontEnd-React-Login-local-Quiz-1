@@ -35,7 +35,7 @@ function Features() {
       id="features"
       className="relative py-30 text-center overflow-hidden bg-gradient-to-b from-black via-zinc-900 to-black"
     >
-      {/* Decorative floating shapes */}
+      
       <img
         src={shape7}
         alt="shape"
@@ -48,7 +48,7 @@ function Features() {
       />
 
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
-        {/* Section Heading */}
+      
         <p className="text-[#E4C590] text-lg uppercase tracking-[0.3em] mb-4 font-medium">
           Why Choose Us
         </p>
@@ -56,12 +56,12 @@ function Features() {
           Our <span className="text-[#E4C590]">Strength</span>
         </h2>
 
-        {/* Features Grid */}
+        
         <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {features.map((feature, i) => (
             <li key={i}>
               <div className="group relative bg-gradient-to-b from-zinc-800/60 to-zinc-900/60 rounded-3xl p-8 border border-[#E4C590]/20 hover:border-[#E4C590]/60 transition duration-300 hover:shadow-[0_0_20px_#E4C590]/20">
-                {/* Icon */}
+                
                 <div className="flex justify-center mb-5">
                   <img
                     src={feature.icon}
@@ -70,17 +70,17 @@ function Features() {
                   />
                 </div>
 
-                {/* Title */}
+                
                 <h3 className="text-xl font-[Forum] text-[#E4C590] mb-3">
                   {feature.title}
                 </h3>
 
-                {/* Description */}
+          
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {feature.text}
                 </p>
 
-                {/* Glow effect */}
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-[#E4C590]/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 rounded-3xl blur-md"></div>
               </div>
             </li>

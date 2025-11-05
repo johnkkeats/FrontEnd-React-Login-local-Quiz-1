@@ -42,7 +42,7 @@ export default function Hero() {
       aria-label="home"
       className="relative w-full h-screen overflow-hidden"
     >
-      {/* Background Image with Fade Transition */}
+      
       {slides.map((slide, index) => (
         <img
           key={slide.id}
@@ -54,7 +54,7 @@ export default function Hero() {
         />
       ))}
 
-      {/* Text Overlay */}
+      
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 transition-all duration-700">
         <p
           key={`subtitle-${current}`}
@@ -85,7 +85,7 @@ export default function Hero() {
         </Link>
       </div>
 
-      {/* Optional Manual Controls */}
+      
       <button
         onClick={() =>
           setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1))

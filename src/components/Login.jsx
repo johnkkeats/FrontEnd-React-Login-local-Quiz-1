@@ -261,9 +261,9 @@ export default function SlotsSignIn() {
       localStorage.setItem("restaurantName", res.data.user.restaurantName);
       showToast("Login successful", "success");
 
-      if (res.data.user.role === "admin") navigate("/admin/dashboard");
-      else if (res.data.user.role === "staff") navigate("/staff/dashboard");
-      else navigate("/customer/home");
+      if (res.data.user.role === "admin") navigate("/dashboard");
+      else if (res.data.user.role === "staff") navigate("/dashboard");
+      else navigate("/dashboard");
     } catch (err) {
       showToast(err.response?.data?.message || "Something went wrong", "error");
     }

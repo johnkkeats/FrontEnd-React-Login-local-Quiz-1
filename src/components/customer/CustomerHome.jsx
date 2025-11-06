@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import showToast from "../ShowToast";
 import axios from "axios";
 import {
   Card,
@@ -17,12 +16,10 @@ import {
   IoCalendarOutline,
   IoStorefrontOutline,
 } from "react-icons/io5";
-import { useNavigate } from "react-router-dom"; // ✅ For redirecting after logout
 
 function UserDashboard() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // ✅ initialize navigation
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -52,36 +49,6 @@ function UserDashboard() {
     fetchUser();
   }, []);
 
-  // ✅ Logout function
-  const handleLogout = async () => {
-    try {
-      const token = localStorage.getItem("token");
-      await axios.post(
-        `http://localhost:5001/api/user/logout`,
-        {},
-        {
-          headers: {
-            Authorization: `Bearer ${token}`, // send token
-          },
-        }
-      );
-
-      localStorage.removeItem("token");
-      sessionStorage.removeItem("user");
-
-      showToast("Log Out Successfully", "success");
-      navigate("/login");
-    } catch (err) {
-      if (err.response && err.response.data && err.response.data.message) {
-        showToast(err.response.data.message, "error");
-      } else {
-        showToast("Something went wrong", "error");
-      }
-    }
-
-    // redirect to login page
-  };
-
   if (loading) {
     return (
       <Typography sx={{ color: "#fff", textAlign: "center", mt: 10 }}>
@@ -110,7 +77,6 @@ function UserDashboard() {
         flexDirection: "column",
         alignItems: "center",
         py: 8,
-        px: 2,
       }}
     >
       <Typography
@@ -127,20 +93,6 @@ function UserDashboard() {
       </Typography>
 
       {/* ✅ Logout Button */}
-      <Button
-        variant="contained"
-        onClick={handleLogout}
-        sx={{
-          backgroundColor: "#E4C590",
-          color: "#000",
-          mb: 3,
-          "&:hover": {
-            backgroundColor: "#d4b878",
-          },
-        }}
-      >
-        Logout
-      </Button>
 
       <Card
         sx={{

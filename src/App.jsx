@@ -16,16 +16,10 @@ import Footer from "./components/Footer";
 import Registration from "./components/Registration";
 import Login from "./components/login";
 import CustomerHome from "./components/customer/CustomerHome";
-import AdminDashboard from "./components/staff/AdminDashboard";
-import StaffDashboard from "./components/staff/StaffDashboard";
+import PrivateRoute from "./components/PrivateRoute";
+import DashBoard from "./components/DashBoard";
 
-const noLayoutPaths = [
-  "/register",
-  "/login",
-  "/customer/home",
-  "/admin/dashboard",
-  "/staff/dashboard",
-];
+const noLayoutPaths = ["/register", "/login", "/dashboard"];
 
 function App() {
   const location = useLocation();
@@ -80,9 +74,17 @@ function App() {
 
         <Route path="/register" element={<Registration />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/customer/home" element={<CustomerHome />} />
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
-        <Route path="/staff/dashboard" element={<StaffDashboard />} />
+
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <DashBoard />
+            </PrivateRoute>
+          }
+        >
+          <Route index element={<CustomerHome />} />
+        </Route>
       </Routes>
     </>
   );
